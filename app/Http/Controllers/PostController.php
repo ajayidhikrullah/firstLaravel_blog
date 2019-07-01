@@ -14,7 +14,8 @@ class PostController extends Controller
 
     //localhost:8000/post -post page
     public function post(){
-        return view('post');
+        $categories = Category::get();
+        return view('post', compact('categories'));
     }
 
     public function signup(){
