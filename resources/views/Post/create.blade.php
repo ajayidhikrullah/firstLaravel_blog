@@ -22,16 +22,28 @@
         </div> -->
         
         <div class="signup-page">
-            <form class="form-horizontal" action="">
+            <form class="form-horizontal" method="POST" action="{{route('createpost')}}">
+            @csrf
                 <div id="form-content">
                     <div class="form-group">
                         <label for="post">Title:</label>
-                        <input type="text" class="form-control" name="title" required placeholder="title name" >
+                        <input type="text" class="form-control" name="title" required placeholder="title name" required >
                     </div>
 
                     <div class="form-group">
+                        <label for="post">Category:</label>
+                        <select class="form-control" name="category_id" id="" required>
+                        <option required value="">select category</option>
+                        @foreach($categories as $category)
+                          <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
                         <label for="body">Content</label>
-						<textarea class="form-control" name="content" id="body" cols="" rows=""></textarea>
+					            	<textarea class="form-control" name="content" id="body" cols="" rows="" required></textarea>
                     </div>
 
                 </div>

@@ -30,6 +30,9 @@ Route::get('/signup', 'Postcontroller@signup');
 Route::get('/login', 'Postcontroller@login');
 Route::get('/category/create', 'CategoryController@create');
 
+//Route::post is when u will submit to database
 Route::post('/category/create', 'CategoryController@store')->name('createcategory');
-
+//Route::get is when u will show in page
 Route::get('/post/create', 'PostController@create');
+Route::post('/post/create', 'PostController@store')->name('createpost');
+Route::get('/post/{id}', 'PostController@show')->name('showpost'); //this helps shows the routes to the readmore page

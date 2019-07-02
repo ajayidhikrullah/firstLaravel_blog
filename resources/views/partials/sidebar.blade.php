@@ -22,7 +22,8 @@
                 <ul class="list-unstyled mb-0">
                 @foreach($categories as $category)
                   <li>
-                    <a href="#">{{$category['name']}}</a>
+                  <!-- {{$category->name}} this is to display out what is in database -->
+                    <a href="#">{{$category->name}}</a> 
                   </li>
                 @endforeach
                 </ul>
