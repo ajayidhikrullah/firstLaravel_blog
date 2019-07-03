@@ -19,7 +19,7 @@
           </div>
           <div class="card-footer text-muted">
             Posted on {{$post->created_at}} by
-            <a href="#">Start Bootstrap</a>
+            <a href="#">Hayjay</a>
           </div>
         </div>
         @endforeach

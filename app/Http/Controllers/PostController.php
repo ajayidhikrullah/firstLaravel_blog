@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Validator;
 use App\Post;
 use App\Category;
+use App\Comment;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
