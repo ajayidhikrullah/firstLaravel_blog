@@ -13,6 +13,8 @@ class CategoryController extends Controller
     public function create(){
         $categories = Category::get();
         return view('Category.create', compact('categories'));
+        
+
     }
 
 
@@ -29,10 +31,10 @@ class CategoryController extends Controller
         }
 
         $category = new Category;
-
         $category->name = $request->name;
 
         $category->save();
+
         return back();
 
     }

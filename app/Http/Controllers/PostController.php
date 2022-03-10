@@ -12,6 +12,7 @@ class PostController extends Controller
     //localhost:8000/ --this is the home page
     public function index(){
         $categories = Category::get();
+        
         $posts = Post::get();
         return view('partials.content', compact('categories', 'posts'));
     }
