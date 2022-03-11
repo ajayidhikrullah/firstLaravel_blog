@@ -22,29 +22,29 @@
         </div> -->
         
         <div class="signup-page">
-            <form class="form-horizontal" action="">
+            <form class="form-horizontal" method="POST" action="">
                 <div id="form-content">
                     <div class="form-group">
                         <label for="name">First Name:</label>
-                            <input type="text" class="form-control" id="name" required placeholder="type in your firstname">
+                            <input type="text" class="form-control" id="name" placeholder="type in your firstname">
                     </div>
                     <div class="form-group">
                         <label for="lname">Last Name:</label>
-                        <input type="text" class="form-control" name="lname" id="lname" required placeholder="your surname">
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="your surname">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" name="email" id="email" required placeholder="your mail" >
+                        <input type="email" class="form-control" name="email" id="email" placeholder="your mail" >
                     </div>
-
+                    {{csrf_field()}};
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password"  id="password" required placeholder="your password">
+                        <input type="password" class="form-control" name="password"  id="password" placeholder="your password">
                     </div>
                 </div>
                 <!-- <input type="submit" value="Sign Up" class="form-control" name="submit"> -->
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Sign Up</button>
                 </div>
             </form>
     </div>

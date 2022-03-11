@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Blog Home - Start Bootstrap Template</title>
+  <title>@yield('title')</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{{ asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -22,6 +22,8 @@
 </head>
 
 <body>
+
+@include('layouts.anyerror');
 
   <!-- Navigation -->
   @include('partials.nav')

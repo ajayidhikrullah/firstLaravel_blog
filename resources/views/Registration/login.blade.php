@@ -26,12 +26,12 @@
                 <div id="form-content">
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" name="email" id="email" required placeholder="your mail" >
+                        <input type="email" class="form-control" name="email" id="email" placeholder="your mail" >
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password"  id="password" required placeholder="your password">
+                        <input type="password" class="form-control" name="password"  id="password" placeholder="your password">
                     </div>
                 </div>
                 <!-- <input type="submit" value="Sign Up" class="form-control" name="submit"> -->

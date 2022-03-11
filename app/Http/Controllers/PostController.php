@@ -53,13 +53,11 @@ class PostController extends Controller
 
         // check for if its working /TESTing
 
-        // dd($request->all());
 
         $post = new Post;
         $post->title = $request->title;
         $post->content = $request->content;
         $post->category_id = $request->category_id;
-
         $post->save();
         return back();
 
@@ -68,6 +66,7 @@ class PostController extends Controller
     public function show($id){
         $post = Post::find($id);
         $categories = Category::get(); //this will b included in all sidebar pages for error
+        
         return view('Post.post', compact('post', 'categories')); //this returns the view route
     }
 

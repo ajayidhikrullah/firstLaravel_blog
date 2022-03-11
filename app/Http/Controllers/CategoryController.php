@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 //imorting my own category model
 use App\Category;
+
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,6 @@ class CategoryController extends Controller
     public function create(){
         $categories = Category::get();
         return view('Category.create', compact('categories'));
-        
-
     }
 
 

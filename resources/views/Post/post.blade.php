@@ -6,21 +6,8 @@
 <!-- Title -->
 <h1 class="mt-4">{{$post->title}}</h1>
 
-<!-- Author -->
-<p class="lead">
-  by
-  <a href="#">...Ade</a>
-</p>
-
-<hr>
-
-<!-- Date/Time -->
-<p>Posted on {{$post->created_at}}</p>
-
-<hr>
-
 <!-- Preview Image -->
-<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+<!-- <img class="img-fluid rounded" src="http://placehold.it/900x300" alt=""> -->
 
 <hr>
 
@@ -29,21 +16,9 @@
 
 <p>{{$post->content}}</p>
 
-<!-- <blockquote class="blockquote">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in
-    <cite title="Source Title">Source Title</cite>
-  </footer>
-</blockquote> -->
-
-<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p> -->
-
 <hr>
 
 <!-- Comments Form -->
-
 
 <div class="card my-4">
   <h5 class="card-header">Leave a Comment:</h5>
@@ -54,32 +29,29 @@
       <div class="form-group">
         <textarea class="form-control" rows="3" name="comment" ></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Comment</button>
     </form>
   </div>
+
+  <!-- Comment with nested comments -->
+  @foreach($post->comments as $comment)
+    <div class="media mb-4">
+      <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+      <div class="media-body">
+        <h5 class="mt-0">Commenter Name</h5>
+        {{$comment->comment}};
+        <p><i>Posted on {{$post->created_at}}</i></p>
+
+      </div>
+    </div>
+@endforeach
+
+
+
+
 </div>
 
 <!-- Single Comment -->
-
-<div class="media mb-4">
-  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-
-  <div class="media-body">
-    <h5 class="mt-0"></h5>
-      <p></p>
-  </div>
-</div>
-
-<!-- Comment with nested comments -->
-@foreach($post->comments as $comment)
-<div class="media mb-4">
-  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-  <div class="media-body">
-    <h5 class="mt-0">Commenter Name</h5>
-    {{$comment->comment}};
-  </div>
-</div>
-@endforeach
 </div>
 
 @endsection
