@@ -20,23 +20,26 @@
             <a href="#">Start Bootstrap</a>
           </div>
         </div> -->
+
+        <div class="mb-4" :errors="$errors"></div>
         
         <div class="signup-page">
-            <form class="form-horizontal" method="POST" action="">
+            <form class="form-horizontal" method="POST" action="{{route('signup')}}">
+                  {{csrf_field()}}
+
                 <div id="form-content">
                     <div class="form-group">
                         <label for="name">First Name:</label>
-                            <input type="text" class="form-control" id="name" placeholder="type in your firstname">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="type in your firstname">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="lname">Last Name:</label>
                         <input type="text" class="form-control" name="lname" id="lname" placeholder="your surname">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="your mail" >
                     </div>
-                    {{csrf_field()}};
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" name="password"  id="password" placeholder="your password">
@@ -44,7 +47,7 @@
                 </div>
                 <!-- <input type="submit" value="Sign Up" class="form-control" name="submit"> -->
                 <div class="form-group">
-                    <button type="submit" name="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
                 </div>
             </form>
     </div>

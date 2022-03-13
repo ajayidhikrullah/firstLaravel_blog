@@ -40,3 +40,6 @@ Route::get('/post/{id}', 'PostController@show')->name('showpost'); //this helps 
 // coment route
 // Route::get('/post/comment', 'CommentController@comment')->name('showcomment');
 Route::post('/post/comment/{id}', 'CommentController@store')->name('createcomment');
+
+// users
+Route::post('/signup','UsersController@signup')->name('signup');

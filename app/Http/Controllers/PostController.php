@@ -12,7 +12,6 @@ class PostController extends Controller
     //localhost:8000/ --this is the home page
     public function index(){
         $categories = Category::get();
-        
         $posts = Post::get();
         return view('partials.content', compact('categories', 'posts'));
     }
@@ -24,7 +23,9 @@ class PostController extends Controller
     }
 
     public function signup(){
+        // $data = User::get();
         return view('Registration.signup');
+        // return view('Signup.create', compact('signup'));
     }
 
     public function login(){
