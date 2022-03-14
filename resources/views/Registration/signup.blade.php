@@ -49,6 +49,10 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Sign Up</button>
                 </div>
+                <hr>
+                <div>
+                  <a class="nav-link" href="/login">Already registered...?</a>
+                </div>
             </form>
     </div>
   
